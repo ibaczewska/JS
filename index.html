@@ -4,18 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <title>JS drum kit</title>
-    <link rel="stylesheet" href="maincss.css"> </head>
+    <link rel="stylesheet" href="maincss.css">
+    <script type="text/javascript" src="mainjs.js"></script>
+</head>
+
 <body>
     <div class="keys">
-        <div data-key="65" class="key"> <kbd>A</kbd> <span class="sound">clap</span> </div>
-        <div data-key="83" class="key"> <kbd>S</kbd> <span class="sound">hihat</span> </div>
-        <div data-key="68" class="key"> <kbd>D</kbd> <span class="sound">kick</span> </div>
-        <div data-key="70" class="key"><kbd>F</kbd> <span class="sound">openhat</span> </div>
-        <div data-key="71" class="key"><kbd>G</kbd> <span class="sound">boom</span> </div>
-        <div data-key="72" class="key"><kbd>H</kbd> <span class="sound">boom</span> </div>
-        <div data-key="74" class="key"><kbd>J</kbd> <span class="sound">boom</span> </div>
-        <div data-key="75" class="key"><kbd>K</kbd> <span class="sound">snare</span> </div>
-        <div data-key="76" class="key"><kbd>L</kbd> <span class="sound">tink</span> </div>
+        <div data-key="65" class="key"> <kbd>A</kbd></div>
+        <div data-key="83" class="key"> <kbd>S</kbd></div>
+        <div data-key="68" class="key"> <kbd>D</kbd></div>
+        <div data-key="70" class="key"><kbd>F</kbd></div>
+        <div data-key="71" class="key"><kbd>G</kbd></div>
+        <div data-key="72" class="key"><kbd>H</kbd></div>
+        <div data-key="74" class="key"><kbd>J</kbd></div>
+        <div data-key="75" class="key"><kbd>K</kbd></div>
+        <div data-key="76" class="key"><kbd>L</kbd></div>
     </div>
     <audio src="sounds/A.wav" data-key="65"></audio>
     <audio src="sounds/S.wav" data-key="83"></audio>
@@ -26,16 +29,6 @@
     <audio src="sounds/J.wav" data-key="73"></audio>
     <audio src="sounds/K.wav" data-key="74"></audio>
     <audio src="sounds/Lg.wav" data-key="75"></audio>
-    <script>
-        window.addEventListener('keydown', function (e) {
-            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-           const key = document.querySelector(`key[data-key="${e.keyCode}"]`);
-            if (!audio) return; //stop the function from running all together
-            audio.currentTime = 0; //rewind to the start
-            audio.play();
-            console.log(key);
-        });
-    </script>
 </body>
 
 </html>
