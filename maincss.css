@@ -1,15 +1,19 @@
 body {
     background-image: url(images/background.jpg);
-
+    width: 100%;
 }
 .keys {
+    margin: 32% 600px;
 
 }
 .key {
-    background-color: blue;
+    background-image: url(images/piano2.gif);
+    color: red;
+    background-repeat: no-repeat;
     border: 1px solid blue;
-    font-size: 1.5rem;
-    padding: 2em .5em;
-    margin: 0 auto;
+    font-size: 1.6rem;
+    padding: 4em .7em;
     display: inline;
+    font-weight: bold;
+
 }
