@@ -10,10 +10,16 @@ body {
     background-image: url(images/piano2.gif);
     color: red;
     background-repeat: no-repeat;
-    border: 1px solid blue;
     font-size: 1.6rem;
     padding: 4em .7em;
     display: inline;
     font-weight: bold;
+    transition: all 2.0s;
+   
 
+}
+.playing {
+    transform: scale(1.1);
+    border-color: red;
+    box-shadow: 0 0 10px red;
 }
